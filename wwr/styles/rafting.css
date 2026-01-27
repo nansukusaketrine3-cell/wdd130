@@ -54,18 +54,21 @@ h1 {
     text-align: center;
     opacity: 0.7;
     background-color: var(--accent1-color);
-    color: #e9c46a
+    color: #fff
         /*white text-make sure there is enough contrast with the background-color*/
 }
 
-hero {
-    position: absolute;
+.hero {
+    position: relative;
 }
 
 .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero article img {
     float: right;
     width: 125px;
-    border: 2px #333333;
-    margin: 10px auto;
-    box-shadow: 0 0 30px #236465;
 }
