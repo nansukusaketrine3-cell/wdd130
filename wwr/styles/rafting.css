@@ -46,16 +46,6 @@ article {
     text-decoration: none;
 }
 
-.hero {
-    position: relative;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 h1 {
     position: absolute;
     top: 20px;
@@ -68,11 +58,11 @@ h1 {
         /*white text-make sure there is enough contrast with the background-color*/
 }
 
-hero heading {
+hero {
     position: absolute;
 }
 
-.hero article img {
+.hero img {
     float: right;
     width: 125px;
     border: 2px #333333;
