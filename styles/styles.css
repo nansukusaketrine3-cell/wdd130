@@ -1,12 +1,37 @@
+/* aside image */
 aside img {
     width: 200px;
     height: auto;
 }
 
-main {
-    max-width: 840px;
+/* Navigation bar */
+nav {
+    background-color: #4CAF50;
+    /* example color */
+    padding: 10px;
 }
 
+nav a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    /* optional, makes links cleaner */
+}
+
+/* main section */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+    /* centers main content */
+}
+
+/* main heading */
+h1 {
+    color: #333333;
+}
+
+/* aside section */
 aside {
     width: 20rem;
     margin: 1rem;
@@ -18,16 +43,21 @@ aside {
     text-align: center;
 }
 
+/* main image */
 main img {
-    width: 150px;
+    width: 200px;
     height: auto;
-    ...
+    border: 2px solid #ccc;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* paragraphs */
 p {
     padding: 0;
 }
 
+/* footer */
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
