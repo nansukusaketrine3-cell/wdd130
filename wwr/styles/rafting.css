@@ -1,7 +1,7 @@
 :root {
     --primary-color: #333333af;
     /* dark grey */
-    --secomdary-color: #333333;
+    --secondary-color: #333333;
     /* dark slate grey */
     --accent1-color: #236465;
     /* dark slate blue */
@@ -18,8 +18,9 @@
 }
 
 body {
+    margin: 0;
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--secondary-color);
 }
 
 header,
@@ -71,4 +72,29 @@ h1 {
 .hero article img {
     float: right;
     width: 125px;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.hero article img {
+    float: right;
+    width: 120px;
+    margin-left: 10px;
+    background-color: var(--accent2-color);
 }
