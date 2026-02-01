@@ -106,3 +106,7 @@
      position: relative;
      grid-column: 1/2;
  }
+
+ h1 {
+     border-bottom: 3px solid black;
+ }
