@@ -44,7 +44,6 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
 }
 
 .two {
@@ -54,15 +53,14 @@ div {
 
 .container3 {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     /* write declarations here */
 
 }
 
 .columns-3 {
-    grid-template-columns: span 3;
+    grid-column: span 3;
     /* write declaration here */
-
 }
 
 .three {
