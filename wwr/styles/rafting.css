@@ -37,9 +37,12 @@ h2 {
 }
 
 nav,
-section,
 article {
     margin: 16px;
+    padding: 8px;
+}
+
+section {
     padding: 8px;
 }
 
@@ -47,54 +50,251 @@ article {
     text-decoration: none;
 }
 
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff
-        /*white text-make sure there is enough contrast with the background-color*/
+.hero {
+    margin: 0 20px 20px 20px;
 }
 
-.hero {
+.hero-box {
+    display: flex;
+    justify-content: space-between;
+    /* pushes text left, image right */
+    align-items: center;
+    gap: 20px;
+
+    border: 2px solid #333;
+    background: var(--accent2-color);
+    padding: 20px;
+}
+
+.hero-box p {
+    flex: 1;
+    /* text takes remaining space */
+    line-height: 1.5;
+}
+
+.hero-box img {
+    width: 140px;
+    /* small image like wireframe */
+    height: auto;
+    object-fit: cover;
+}
+
+header {
+    background-color: #d8c8ff;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.header-inner {
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    /* switch from grid to flex */
+    align-items: center;
+    justify-content: space-between;
+    /* pushes logo left, nav right */
+    padding: 0 20px;
+}
+
+.logo {
+    height: 95px;
+    /* moves logo slightly from left */
+    margin-left: 20px;
+}
+
+.logo {
+    grid-column: 1;
+    height: 95px;
+    margin-left: 20px;
+    /* moves logo away from left edge */
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    background-color: white;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    overflow: hidden;
+    /* keeps inner borders clean */
+}
+
+.nav li {
+    border-right: 1px solid var(--secondary-color);
+}
+
+.nav li:last-child {
+    border-right: none;
+    /* remove last divider */
+}
+
+nav ul {
+    grid-column: 3;
+    /* right column */
+    justify-self: end;
+    /* push to extreme right */
+}
+
+.nav a {
+    display: block;
+    padding: 8px 16px;
+    /* smaller height, wider look */
+    text-decoration: none;
+    color: var(--accent1-color);
+    font-weight: bold;
+    white-space: nowrap;
+    /* prevents text wrapping */
+}
+
+.nav a:hover {
+    background-color: var(--accent2-color);
+    color: black;
+}
+
+main section:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+main section:nth-of-type(1) img {
+    width: 80px;
+    /* smaller width */
+    height: auto;
+    /* maintain aspect ratio */
+    object-fit: cover;
+}
+
+main section:nth-of-type(1) h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main section:nth-of-type(2) {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #333;
+    background: white;
+}
+
+/* Section container for images */
+main section:nth-of-type(2) {
+    display: flex;
+    /* horizontal layout */
+    justify-content: center;
+    /* center the images */
+    gap: 15px;
+    /* space between images */
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #333;
+    background: white;
+}
+
+/* Minimize images */
+main section:nth-of-type(2) img {
+    width: 80px;
+    /* small width */
+    height: auto;
+    /* maintain aspect ratio */
+    object-fit: cover;
+}
+
+main section:nth-of-type(2) h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background-color: #d8c8ff;
+    padding: 15px 20px;
+    margin-top: 20px;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
+}
+
+.socialmedia img {
+    width: 35px;
+}
+
+.title-banner {
+    width: 840px;
+    margin: 20px auto;
+    padding: 25px 20px;
+    background: white;
+    border: 2px solid #333;
+    text-align: center;
     position: relative;
 }
 
-.hero img {
-    display: block;
-    width: 100%;
+/* Title text */
+.title-banner h1 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Decorative angled lines */
+.title-banner::before,
+.title-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+.title-banner::before {
+    left: -2px;
+    transform: skewX(-30deg);
+    border-left: 2px solid #333;
+}
+
+.title-banner::after {
+    right: -2px;
+    transform: skewX(30deg);
+    border-right: 2px solid #333;
+}
+
+/* Adventure section container */
+.adventure-section {
+    text-align: center;
+    /* center the title */
+    margin: 20px;
+}
+
+/* Adventure title */
+.adventure-section h2 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    margin-bottom: 15px;
+}
+
+/* Images container: horizontal layout */
+.adventure-images {
+    display: flex;
+    /* horizontal row */
+    justify-content: center;
+    /* center the row */
+    gap: 15px;
+    /* space between images */
+}
+
+/* Small images */
+.adventure-images img {
+    width: 80px;
+    /* small size */
     height: auto;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: var(--accent2-color);
-    padding: 15px;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-}
-
-.hero article img {
-    float: right;
-    width: 120px;
-    margin-left: 10px;
-    ;
+    object-fit: cover;
 }
