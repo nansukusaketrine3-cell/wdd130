@@ -2,9 +2,7 @@
     --primary-color: #333333af;
     --secondary-color: #333333;
     --accent1-color: #236465;
-    /* dark slate blue */
     --accent2-color: #e9c46a;
-    /* light golden yellow */
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -78,24 +76,12 @@ header {
     position: relative;
     width: 100%;
     height: 400px;
-    background: url('images/rapids.jpg') no-repeat center center;
+    background: var(--accent2-color) url('images/rapids.jpg') no-repeat center center;
     background-size: cover;
     border: 2px solid var(--secondary-color);
-    background-color: var(--accent2-color);
-    /* fallback */
+    /* boundary */
 }
 
-/* Hero Title */
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: white;
-    font-size: 2.5rem;
-    z-index: 2;
-}
-
-/* Hero Article */
 .hero article {
     position: absolute;
     bottom: 20px;
@@ -107,7 +93,6 @@ header {
     border: 2px solid var(--secondary-color);
 }
 
-/* Hero Article Image */
 .hero article img {
     float: right;
     width: 140px;
@@ -115,13 +100,19 @@ header {
     margin-left: 15px;
 }
 
-/* SECTIONS */
-main section {
-    margin: 20px;
-    padding: 20px;
+.hero h1.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-/* History Section */
+/* HISTORY SECTION */
 main section:nth-of-type(1) {
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
@@ -141,24 +132,39 @@ main section:nth-of-type(1) h2 {
     margin-bottom: 10px;
 }
 
-/* Adventure Section */
-main section:nth-of-type(2) {
+/* ADVENTURE SECTION */
+.adventure-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.adventure-section h2 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    margin-bottom: 15px;
+}
+
+.adventure-images {
     display: flex;
     justify-content: center;
     gap: 15px;
-    border: 2px solid #333;
-    background: white;
 }
 
-main section:nth-of-type(2) img {
+.adventure-images figure {
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-images img {
     width: 80px;
     height: auto;
     object-fit: cover;
 }
 
-main section:nth-of-type(2) h2 {
-    text-align: center;
-    margin-bottom: 15px;
+.adventure-images figcaption {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: var(--accent1-color);
 }
 
 /* TITLE BANNER */
@@ -200,30 +206,6 @@ main section:nth-of-type(2) h2 {
     right: -2px;
     transform: skewX(30deg);
     border-right: 2px solid #333;
-}
-
-/* ADVENTURE SECTION */
-.adventure-section {
-    text-align: center;
-    margin: 20px;
-}
-
-.adventure-section h2 {
-    font-family: var(--heading-font);
-    color: var(--accent1-color);
-    margin-bottom: 15px;
-}
-
-.adventure-images {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.adventure-images img {
-    width: 80px;
-    height: auto;
-    object-fit: cover;
 }
 
 /* FOOTER */
