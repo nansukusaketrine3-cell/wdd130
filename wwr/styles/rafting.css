@@ -402,6 +402,18 @@ body {
     right: 0;
 }
 
+.history-wrapper h3 {
+    font-family: var(--heading-font);
+    font-size: 28px;
+    color: #e9c46a;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #236465;
+    padding-bottom: 8px;
+}
+
 .history-container {
     position: relative;
     width: 100%;
